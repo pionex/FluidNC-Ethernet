@@ -128,6 +128,10 @@ void setup() {
         sys.state = State::ConfigAlarm;
     }
 
+    if (config->_spi != nullptr && config->_W5500 != nullptr) {
+        config->_W5500->init();
+    }
+
     // Try Bluetooth first so its memory can be released if it is disabled
     if (!WebUI::bt_config.begin()) {
         WebUI::wifi_config.begin();

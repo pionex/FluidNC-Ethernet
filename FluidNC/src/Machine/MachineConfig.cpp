@@ -52,6 +52,7 @@ namespace Machine {
 
         handler.section("spi", _spi);
         handler.section("sdcard", _sdCard);
+        handler.section("W5500", _W5500);
 
         handler.section("kinematics", _kinematics);
         handler.section("axes", _axes);

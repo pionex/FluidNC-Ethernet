@@ -15,6 +15,7 @@
 #include "../Probe.h"
 #include "src/Parking.h"
 #include "../SDCard.h"
+#include "../W5500.h"
 #include "../Spindles/Spindle.h"
 #include "../Stepping.h"
 #include "../Stepper.h"
@@ -75,6 +76,7 @@ namespace Machine {
         Parking*              _parking        = nullptr;
         OLED*                 _oled           = nullptr;
         Spindles::SpindleList _spindles;
+        W5500*                _W5500          = nullptr;
 
         UartChannel* _uart_channels[MAX_N_UARTS] = { nullptr };
         Uart*        _uarts[MAX_N_UARTS]         = { nullptr };
